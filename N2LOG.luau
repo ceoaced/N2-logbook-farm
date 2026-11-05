@@ -9,7 +9,7 @@ getgenv().AutoPickups = true
 
 local TDS = loadstring(game:HttpGet("https://getaether.cc/loader.lua"))()
 
-TDS:Loadout("Gatling Gun", "Pyromancer", "Minigunner", "Assassin", "None")
+TDS:Loadout("Gatling Gun", "Pyromancer", "Assassin", "None", "None")
 TDS:Mode("Act2Easy")
 TDS:GameInfo("Nightmare Flash", {})
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("PlayerManager"):WaitForChild("RE:UserLoadout"):FireServer()
