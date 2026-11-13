@@ -1,5 +1,5 @@
 -- [ Settings ] --
-getgenv().AutoReady = true
+getgenv().AutoReady = false
 getgenv().AutoSkip = true
 getgenv().AutoSkipCutscenes = true
 getgenv().AutoRejoin = true
@@ -8,11 +8,11 @@ getgenv().AutoPickups = true
 -- [ End Settings ] --
 
 local TDS = loadstring(game:HttpGet("https://getaether.cc/loader.lua"))()
-
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("PlayerManager"):WaitForChild("RE:UserLoadout"):FireServer()
 TDS:Loadout("Gatling Gun", "Pyromancer", "Assassin", "None", "None")
 TDS:Mode("Act2Easy")
 TDS:GameInfo("Nightmare Flash", {})
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("PlayerManager"):WaitForChild("RE:UserLoadout"):FireServer()
+
 
 -- [ Wave 1 ] --
 TDS:Place("Pyromancer", 13.832212448120117, 48.14189910888672, 39.59397888183594)
@@ -21,7 +21,7 @@ TDS:Place("Assassin", 14.551532745361328, 48.26252365112305, 45.358123779296875)
 TDS:SetTarget(1, "Random")
 TDS:SetTarget(1, "Farthest")
 TDS:Place("Assassin", 14.9739351272583, 48.2148551940918, 43.33652877807617)
-
+TDS:Ready()
 -- [ Wave 2 ] --
 TDS:Place("Assassin", 13.359397888183594, 48.157493591308594, 42.08958435058594)
 TDS:Place("Assassin", 12.817760467529297, 48.30685043334961, 46.808963775634766)
